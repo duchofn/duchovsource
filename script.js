@@ -1,3 +1,8 @@
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+}
+
 function showSolution(solution) {
     const solutions = {
         sap: { title: 'SAP', description: 'A leading ERP solution for finance, supply chain, and workforce automation.' },
