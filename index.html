@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vSource Software Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#consulting">AI Development Consulting</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#industry">Industry</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Transforming Legacy Systems with AI-Powered Innovation</h1>
+        <p>Enhancing AI to optimize legacy platforms, reducing costs, and ensuring seamless digital transformation.</p>
+        <button onclick="contactUs()">Get in Touch</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We empower businesses by delivering cutting-edge AI solutions that optimize performance, reduce costs, and drive efficiency.</p>
+        
+        <!-- Leadership Section -->
+        <h3>Leadership</h3>
+        <div class="leadership">
+            <div class="leader">
+                <img src="leader1.jpg" alt="Leader 1">
+                <h4>John Doe</h4>
+                <p>CEO & AI Strategist</p>
+            </div>
+            <div class="leader">
+                <img src="leader2.jpg" alt="Leader 2">
+                <h4>Jane Smith</h4>
+                <p>CTO & AI Architect</p>
+            </div>
+            <div class="leader">
+                <img src="leader3.jpg" alt="Leader 3">
+                <h4>Michael Johnson</h4>
+                <p>Head of AI Engineering</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Development Consulting Section -->
+    <section id="consulting">
+        <h2>AI Development Consulting</h2>
+        <p>We provide AI-driven consulting services to optimize legacy platforms and integrate AI seamlessly into your business.</p>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions">
+        <h2>Solutions</h2>
+        <ul>
+            <li><a href="#" onclick="showSolution('servicenow')">ServiceNow</a></li>
+            <li><a href="#" onclick="showSolution('sap')">SAP</a></li>
+            <li><a href="#" onclick="showSolution('opentext')">OpenText</a></li>
+            <li><a href="#" onclick="showSolution('salesforce')">Salesforce</a></li>
+        </ul>
+
+        <div id="solution-details">
+            <h3 id="solution-title"></h3>
+            <p id="solution-description"></p>
+        </div>
+    </section>
+
+    <!-- Industry Section -->
+    <section id="industry">
+        <h2>Industry</h2>
+        <ul>
+            <li><a href="#" onclick="showIndustry('banking')">Banking</a></li>
+            <li><a href="#" onclick="showIndustry('insurance')">Insurance</a></li>
+            <li><a href="#" onclick="showIndustry('retail')">Retail</a></li>
+        </ul>
+
+        <div id="industry-details">
+            <h3 id="industry-title"></h3>
+            <p id="industry-description"></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 vSource Software Solutions. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
