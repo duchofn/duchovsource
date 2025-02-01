@@ -1,106 +1,80 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    display: flex;
+    background-color: #eef6ff;
     color: #333;
 }
 
-.header {
+.sidebar {
+    width: 250px;
     background-color: #0044cc;
+    height: 100vh;
+    padding: 15px;
     color: white;
-    padding: 20px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
 }
 
-.navbar .nav-links {
+.sidebar .main-menu {
     list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.navbar .nav-links li {
-    display: inline;
+.sidebar .main-menu > li {
+    margin-bottom: 20px;
 }
 
-.navbar .nav-links a {
+.sidebar .main-menu > li > a {
     text-decoration: none;
     color: white;
     font-size: 16px;
-    font-weight: bold;
+    display: block;
 }
 
-.navbar .nav-links a:hover {
+.sidebar .main-menu > li > a:hover {
+    text-decoration: underline;
+}
+
+.sidebar .submenu {
+    list-style: none;
+    margin: 10px 0 0 20px;
+    padding: 0;
+    display: none;
+}
+
+.sidebar .submenu > li > a {
+    text-decoration: none;
     color: #ffcc00;
+    font-size: 14px;
 }
 
-.hero {
-    background-color: #eef6ff;
-    padding: 60px 10%;
-    text-align: center;
+.sidebar .submenu > li > a:hover {
+    text-decoration: underline;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    color: #0044cc;
+.sidebar .main-menu > li:hover .submenu {
+    display: block;
 }
 
-.hero-content p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.hero-content button {
-    padding: 10px 20px;
-    background-color: #0044cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.hero-content button:hover {
-    background-color: #003399;
+main {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    background-color: #f4f4f4;
 }
 
 section {
-    padding: 40px 10%;
-}
-
-.about, .consulting, .solutions, .industry, .contact {
-    background-color: white;
-    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #0044cc;
-}
-
-.solution-list, .industry-list {
-    list-style: none;
-    padding: 0;
-}
-
-.solution-list li a, .industry-list li a {
-    text-decoration: none;
-    color: #0044cc;
-    font-size: 18px;
-}
-
-.solution-list li a:hover, .industry-list li a:hover {
-    text-decoration: underline;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     background-color: #0044cc;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }

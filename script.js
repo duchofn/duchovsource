@@ -1,47 +1,24 @@
-function contactUs() {
-    alert('Thank you for your interest! Please fill out the contact form below.');
-}
-
 function showSolution(solution) {
-    const solutionData = {
-        'servicenow': {
-            title: 'ServiceNow',
-            description: 'IT Service Management (ITSM) platform that automates workflows and enhances IT support efficiency.'
-        },
-        'sap': {
+    const solutions = {
+        sap: {
             title: 'SAP',
-            description: 'A leading ERP solution for finance, supply chain, and business process automation.'
+            description: 'A leading ERP solution for finance, supply chain, and workforce automation. SAP provides end-to-end solutions for enterprise resource planning.'
         },
-        'opentext': {
+        opentext: {
             title: 'OpenText',
-            description: 'Enterprise Content Management (ECM) solution that enhances document automation and workflow efficiency.'
+            description: 'OpenText is a powerful ECM (Enterprise Content Management) platform that helps manage, process, and analyze unstructured data effectively.'
         },
-        'salesforce': {
+        servicenow: {
+            title: 'ServiceNow',
+            description: 'ServiceNow is an ITSM (IT Service Management) platform that automates workflows and improves IT support efficiency.'
+        },
+        salesforce: {
             title: 'Salesforce',
-            description: 'Customer Relationship Management (CRM) system for sales automation and customer engagement.'
+            description: 'Salesforce is a CRM (Customer Relationship Management) solution for managing customer interactions, sales automation, and marketing campaigns.'
         }
     };
 
-    document.getElementById('solution-title').innerText = solutionData[solution].title;
-    document.getElementById('solution-description').innerText = solutionData[solution].description;
-}
-
-function showIndustry(industry) {
-    const industryData = {
-        'banking': {
-            title: 'Banking',
-            description: 'AI-powered financial automation, fraud detection, and customer analytics for banking institutions.'
-        },
-        'insurance': {
-            title: 'Insurance',
-            description: 'Automated claims processing, risk analysis, and AI-enhanced policy recommendations.'
-        },
-        'retail': {
-            title: 'Retail',
-            description: 'AI-driven customer personalization, demand forecasting, and inventory optimization.'
-        }
-    };
-
-    document.getElementById('industry-title').innerText = industryData[industry].title;
-    document.getElementById('industry-description').innerText = industryData[industry].description;
+    const solutionData = solutions[solution];
+    document.getElementById('solution-title').innerText = solutionData.title;
+    document.getElementById('solution-description').innerText = solutionData.description;
 }
