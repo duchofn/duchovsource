@@ -33,36 +33,15 @@ function showSolution(solution) {
     }
 }
 
-// Lazy load images for better performance
-document.addEventListener("DOMContentLoaded", () => {
-    const lazyImages = document.querySelectorAll("img");
+// Attach event listeners to submenu items for dynamic content loading
+document.addEventListener('DOMContentLoaded', () => {
+    const submenuItems = document.querySelectorAll('.submenu a');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src; // Use data-src to load images lazily
-                img.classList.add("fade-in"); // Add animation
-                observer.unobserve(img);
-            }
+    submenuItems.forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            const solutionKey = event.target.getAttribute('onclick').match(/showSolution\('(.*?)'\)/)[1];
+            showSolution(solutionKey);
         });
-    });
-
-    lazyImages.forEach(img => {
-        observer.observe(img);
-    });
-});
-
-// Fade-in effect for images and sections when they appear on scroll
-document.addEventListener("scroll", () => {
-    const elements = document.querySelectorAll(".section-image, section");
-
-    elements.forEach(element => {
-        const position = element.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
-
-        if (position < screenHeight - 100) {
-            element.classList.add("visible");
-        }
     });
 });
