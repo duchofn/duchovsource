@@ -25,6 +25,10 @@ body {
 }
 
 .sidebar {
+    left: -250px; /* Hide sidebar by default */
+    position: fixed;
+    transition: left 0.3s ease-in-out;
+    
     width: 250px;
     background-color: #0044cc;
     height: 100vh;
@@ -39,6 +43,8 @@ body {
 }
 
 .sidebar.active {
+    left: 0; /* Show sidebar properly */
+    
     transform: translateX(0);
 }
 
@@ -96,6 +102,10 @@ footer {
 /* Responsive Styles */
 @media (min-width: 768px) {
     .sidebar {
+    left: -250px; /* Hide sidebar by default */
+    position: fixed;
+    transition: left 0.3s ease-in-out;
+    
         transform: translateX(0);
         position: static;
         width: 250px;
@@ -108,6 +118,8 @@ footer {
 }
 
 .sidebar.active {
+    left: 0; /* Show sidebar properly */
+    
     transform: translateX(0);
     position: fixed;
     z-index: 10; /* Ensure sidebar is above content */

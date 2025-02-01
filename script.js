@@ -11,6 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Close sidebar when clicking outside
+document.addEventListener("click", (event) => {
+    const sidebar = document.querySelector(".sidebar");
+    const hamburger = document.querySelector(".hamburger");
+
+    if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+        sidebar.classList.remove("active");
+        document.body.style.overflow = "auto";
+    }
+});
+
+// Ensure submenu items close sidebar when clicked
+document.querySelectorAll(".submenu a").forEach(item => {
+    item.addEventListener("click", () => {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.remove("active");
+        document.body.style.overflow = "auto";
+    });
+});
     document.addEventListener("click", (event) => {
         if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
             sidebar.classList.remove("active");
